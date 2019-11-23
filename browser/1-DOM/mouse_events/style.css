@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #050524;
+}
+button {
+    width: 400px;
+    justify-items: center;
+    align-self: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #00ffff;
+}
+
+#list-item-one {
+    margin-top: 120px;
+}
+
+#list-item-five {
+    display: none;
+}
+
+#reset-button {
+    background-color: orange;
+}

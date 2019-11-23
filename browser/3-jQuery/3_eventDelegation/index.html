@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Delegation</title>
+</head>
+<body>
+
+    <h1>Button List</h1>
+    <div>
+        <button class="btns">Button 1</button>
+        <button class="btns">Button 2</button>
+        <button class="btns">Button 3</button>
+    </div>
+
+    <h3>Want to add new button?</h3>
+    <button id="addButton">Add Button</button>
+
+    <h1>User List</h1>
+    <table id="users" style="border: 1px solid;">
+        <tr id="user-1">
+            <td>1</td>
+            <td>User -1 </td>
+            <td><button class="removeButton">remove me</button></td>
+        </tr>
+    </table>
+
+    <h3>Want to add new user?</h3>
+    <button id="addUserButton">New User</button>
+    
+    
+</body>
+<script src="../lib/jquery.js"></script>
+<script src="main.js"></script>
+</html>
