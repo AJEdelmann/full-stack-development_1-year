@@ -1,0 +1,49 @@
+$main: tomato;
+$secondary: rgb(226, 226, 226);
+
+//MIXIIIIIINS
+@mixin babylon($size, $weight) {
+    font-size: $size;
+    font-family: monospace;
+    font-weight: $weight;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $main;
+        @include babylon(30px, 700);
+        // font-size: 2.5em;
+        // font-family: monospace;
+        // font: {
+        //     size: 2.5em;
+        //     family: monospace;
+        // }
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 800px;
+    .item {
+        flex: 0 30%;
+        height: 200px;
+        background-color: $main;
+        h2 {
+            color: $secondary;
+            @include babylon(20px, 100);
+            // font: {
+            //     size: 2.5em;
+            //     font-family: monospace;
+            // }
+        }
+    }
+}
+

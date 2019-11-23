@@ -1,0 +1,16 @@
+.box{
+    height: 400px;
+    width: 100%;
+}
+
+#first-container {
+    background-color: red;
+}
+
+#second-container{
+    background-color: blanchedalmond;
+}
+
+#third-container {
+    background-color: green;
+}

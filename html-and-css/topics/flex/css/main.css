@@ -1,0 +1,88 @@
+.item {
+    background: tomato;
+}
+
+html, body, main, .parent {
+    height: 100%;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.item {
+    padding: 5px;
+    flex-basis: 200px;
+    flex-grow: 1;
+    transition: flex-grow .5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    -webkit-clip-path: ellipse(25% 40% at 50% 50%);
+    clip-path: ellipse(25% 40% at 50% 50%);
+    background: url(https://assets.dci.org/5be9fd48629f4b2e640ce1b2_ew42n2O7E3oIEVSiAHBryS7rAVkBVrfW.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.item:hover {
+    flex-grow:12;
+}
+
+p {
+    color: white;
+    font-size: 2em;
+}
+/* 
+html, body, main, .parent {
+    height: 100%;
+}
+
+.parent {
+    background: burlywood;
+    position: relative;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+#bg {
+    background: url(/assets/bg.jpg) no-repeat center center;
+    background-size: contain;
+}
+
+#brad {
+    background: url(/assets/brad.png) no-repeat center center;
+    background-size: contain;
+    transition: bottom 3s ease-in-out;
+}
+
+#hugh {
+    background: url(/assets/hugh.png) no-repeat center center;
+    background-size: contain;
+    transition: left 3s ease-in-out;
+}
+
+.parent:hover #hugh{
+    left: 1000px;
+} 
+
+.parent:hover #brad{
+    bottom: 1000px;
+}  */

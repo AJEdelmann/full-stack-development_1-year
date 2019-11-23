@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    height: 100%;
+}
+
+.header{
+    padding-top: 40px;
+}
+
+.red {
+    background-color: tomato;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blueviolet;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.turquoise {
+    background-color: turquoise;
+}
+
+/* Layout of 2 cols*/
+.col-2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+/* Layout of 3 cols*/
+.col-3 {
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+/* Layout of 5 cols */
+
+.col-5{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 5px 0px #00000040;
+}
+
+nav ul {
+    text-align: center;
+}
+nav li {
+    display: inline;
+    padding: 0 15px;
+    border-right: 1px solid gray;
+}
+
+nav li:last-child {
+    border-right: 0;
+}
+
+.row img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+

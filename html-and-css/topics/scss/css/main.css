@@ -1,0 +1,27 @@
+.title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .title-box h1 {
+    color: tomato;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: 700; }
+
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 800px; }
+  .box .item {
+    flex: 0 30%;
+    height: 200px;
+    background-color: tomato; }
+    .box .item h2 {
+      color: #e2e2e2;
+      font-size: 20px;
+      font-family: monospace;
+      font-weight: 100; }

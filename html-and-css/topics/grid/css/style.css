@@ -1,0 +1,20 @@
+.mother {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);    
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    background-color: palevioletred;
+    overflow: hidden;
+}
+
+.one {
+    background: tomato;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
