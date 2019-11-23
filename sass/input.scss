@@ -1,0 +1,186 @@
+$primary: #016690;
+$border-card: #dad6ab;
+$peace: #fff;
+$bg-card: #e0ddb2;
+
+@mixin malu($size, $weight) {
+    font-size: $size;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    ul {
+        @include flex-center();
+        align-items: center;
+        height: 4rem;
+
+        li {
+            list-style: none;
+            padding: 1rem;
+
+            a {
+                color: lighten($primary, 10%);
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    @include malu(1.2rem, 100);
+}
+
+header {
+    height: 20rem;
+    background-image: url(images_website/header.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        @include malu(2rem, 700);
+    }
+}
+
+.cards,
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.card {
+    padding: 1rem;
+    background-color: adjust-hue($bg-card, 10%);
+    margin: 1rem;
+    border: 2px solid $border-card;
+    border-radius: 5px;
+
+    .img {
+        background-size: cover;
+        height: 10rem;
+        width: 100%;
+        background-position: center;
+
+    }
+
+    .img-mountain {
+        background-image: url(images_website/mountain.jpg);
+    }
+
+    .img-surfer {
+        background-image: url(images_website/surfer.jpg);
+    }
+
+    .img-tree {
+        background-image: url(images_website/tree.jpg);
+    }
+
+    .card-text {
+        padding-top: 1rem;
+        @include malu(1rem, 300);
+    }
+}
+
+main {
+    @include flex-center();
+    flex-flow: column;
+    margin: 1rem;
+
+    aside,
+    article {
+        padding: 1rem;
+        @include malu(1rem, 300);
+    }
+
+    aside {
+        border: 2px solid $border-card;
+    }
+
+}
+
+footer {
+
+    ul {
+        @include flex-center();
+        align-items: center;
+        height: 4rem;
+        background-color: desaturate($primary, 20%);
+
+        li {
+            list-style: none;
+            justify-content: center;
+
+            a {
+                color: $peace;
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    .card {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        width: 80%;
+        margin: 0.5rem;
+
+        .card-text {
+            padding: 0 1rem 1rem 1rem;
+        }
+    }
+
+    main {
+        flex-flow: row nowrap;
+
+        article {
+            width: 50%;
+        }
+
+        aside {
+            width: 25%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .cards {
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .card {
+            width: 45%;
+
+            .card-text {
+                width: 60%;
+            }
+
+            .img {
+                width: 40%;
+            }
+        }
+    }
+
+}

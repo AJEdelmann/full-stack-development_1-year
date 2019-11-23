@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem; }
+  nav ul li {
+    list-style: none;
+    padding: 1rem; }
+    nav ul li a {
+      color: #018ac3; }
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100; }
+
+header {
+  height: 20rem;
+  background-image: url(images_website/header.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1rem; }
+  header h1 {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700; }
+
+.cards,
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.card {
+  padding: 1rem;
+  background-color: #dbe0b2;
+  margin: 1rem;
+  border: 2px solid #dad6ab;
+  border-radius: 5px; }
+  .card .img {
+    background-size: cover;
+    height: 10rem;
+    width: 100%;
+    background-position: center; }
+  .card .img-mountain {
+    background-image: url(images_website/mountain.jpg); }
+  .card .img-surfer {
+    background-image: url(images_website/surfer.jpg); }
+  .card .img-tree {
+    background-image: url(images_website/tree.jpg); }
+  .card .card-text {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300; }
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 1rem; }
+  main aside,
+  main article {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300; }
+  main aside {
+    border: 2px solid #dad6ab; }
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #106082; }
+  footer ul li {
+    list-style: none;
+    justify-content: center; }
+    footer ul li a {
+      color: #fff;
+      margin: 1rem; }
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    justify-content: flex-end; }
+  .card {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0.5rem; }
+    .card .card-text {
+      padding: 0 1rem 1rem 1rem; }
+  main {
+    flex-flow: row nowrap; }
+    main article {
+      width: 50%; }
+    main aside {
+      width: 25%; } }
+
+@media screen and (min-width: 1024px) {
+  .cards {
+    flex-flow: row wrap;
+    justify-content: center; }
+    .cards .card {
+      width: 45%; }
+      .cards .card .card-text {
+        width: 60%; }
+      .cards .card .img {
+        width: 40%; } }
