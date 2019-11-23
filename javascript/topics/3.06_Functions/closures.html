@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function outer() {
+    var b = 10
+    var la = 'llLLA'
+    function inner(){
+        var a = 20
+        console.log(a + b + la)
+    }
+
+    return inner;
+}
+
+
+var X = outer()  // X equals to whatever outer returns x = inner()
+var Y = outer()  // X equals to whatever outer returns x = inner()
+
+console.log(typeof(X)) // I am a function
+console.log(X)
+console.dir(X)
+X() // inner()
+X()
+X()
+
+Y()
+</script>
+</html>
