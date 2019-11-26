@@ -1,6 +1,5 @@
 document.getElementById("btnGetUserData").addEventListener('click', getUserData);
 
-
 // We are sending request to server and bring user data using Fetch API
 // @author dogFather
 // Since version 1.0
@@ -26,5 +25,45 @@ function getUserData() {
             });
             html += '</ul>';
             document.getElementById('response').innerHTML = html;
+        })
+}
+
+// Send data to server part
+document.getElementById("addPostForm").addEventListener('submit', addPost);
+
+function addPost(event) {
+
+    event.preventDefault();
+    console.log('addPost...')
+    let title = document.getElementById('title').value;
+    let body = document.getElementById('body').value;
+
+    const myPost = {
+        title: title,
+        body: body
+    };
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application-/json'
+        },
+        body: JSON.stringify(myPost)
+    };
+
+    fetch("https://jsonplaceholder.typicode.com/posts", options)
+        .then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                return Promise.reject({
+                    status: response.status,
+                    statusText: response.statusText
+                });
+            }
+        })
+        .then((data) => console.log(data))
+        .catch(error => {
+            console.log('Error message:' + error.statusText);
         })
 }
